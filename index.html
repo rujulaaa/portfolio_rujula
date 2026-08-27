@@ -241,7 +241,7 @@
     }
 
     /* =========================================================
-       ORIGIN STORY / MEME CARD (MASKED LEFT & BOTTOM EDGES)
+       ORIGIN STORY / MEME CARD (FULL BLEED RECTANGULAR PHOTO)
        ========================================================= */
     .origin-card {
       border: 1.5px solid var(--border-subtle);
@@ -249,7 +249,7 @@
       padding: 0;
       background: var(--bg-surface);
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1.15fr 0.85fr;
       margin-bottom: 5.5rem;
       box-shadow: 0 8px 30px rgba(28, 25, 23, 0.04);
       position: relative;
@@ -263,33 +263,29 @@
       box-shadow: 0 18px 45px rgba(28, 25, 23, 0.08);
     }
 
-    /* Image Wrapper with overscan cropping and clean border dividers */
+    /* Edge-to-Edge Rectangular Photo Display with Dark Dividing Border */
     .origin-img-wrapper {
       position: relative;
       height: 100%;
-      min-height: 400px;
-      background: #FFFFFF;
+      min-height: 420px;
+      background: #1C1917;
       overflow: hidden;
       display: flex;
       align-items: stretch;
       border-right: 2px solid var(--border-strong);
-      border-bottom: 2px solid var(--border-strong);
     }
 
-    /* Crops the left (-14px) and bottom (-18px) to hide any unstraight cuts */
     .origin-img-wrapper img {
-      width: calc(100% + 28px);
-      height: calc(100% + 24px);
-      margin-left: -14px;
-      margin-bottom: -18px;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      object-position: left bottom;
+      object-position: center;
       display: block;
       transition: transform 0.4s ease;
     }
 
     .origin-card:hover .origin-img-wrapper img {
-      transform: scale(1.03);
+      transform: scale(1.025);
     }
 
     /* Right Editorial Text Side */
@@ -867,11 +863,11 @@
       </div>
 
       <!-- =====================================================
-           SECTION 2: ORIGIN STORY / MEME CARD (MASKED EDGES)
+           SECTION 2: ORIGIN STORY / MEME CARD (FULL PHOTO BLEED)
            ===================================================== -->
       <div class="origin-card">
         <div class="origin-img-wrapper">
-          <img src="me-early-data.png" alt="Rujula analyzing data since day one" onerror="this.onerror=null; this.src='#f82553.jpg';" />
+          <img src="me-early-data.jpeg" alt="Rujula analyzing data since day one" onerror="this.onerror=null; this.src='me-early-data.jpg';" />
         </div>
         <div class="origin-text-side">
           <span class="origin-badge">
@@ -879,7 +875,7 @@
             Early Baseline • Day One
           </span>
           <h3 class="origin-quote">
-            "Initial days of casually reviewing distribution curves."
+            "Just a toddler casually reviewing distribution curves."
           </h3>
           <p class="origin-desc">
             Debugging statistical variance on a vintage CRT setup with zero runtime panic. Some people find data science later in life—apparently, it was running in background processes all along.
@@ -917,14 +913,14 @@
               <span class="experience-period">June 2026 – Present</span>
             </div>
             <ul class="experience-bullets">
-              <li>Own a back-end data pipeline end to end on AWS at a healthcare AI company.</li>
-              <li>Migrated the nurse onboarding email system from a manual Gmail mail merge process to an automated AWS SES workflow.</li>
-              <li>Debug cross-client rendering issues, including Gmail dark mode inversion and inconsistent image delivery between Google Drive and S3 hosting, by standardizing formats.</li>
-              <li>Build the company's production website using Next.js and TypeScript, from initial setup through local development toward launch.</li>
-              <li>Test application functionality to catch rendering and delivery issues before release.</li>
-              <li>Track and manage work in JIRA within an Agile workflow.</li>
-              <li>Document processes and the full pipeline in a clear, maintainable playbook adopted team-wide.</li>
-              <li>Communicate directly with the founding team, translating technical issues into clear, actionable recommendations for non-technical stakeholders.</li>
+              <li>Own a back-end data pipeline end to end on AWS at a healthcare AI company [cite: 1, 18].</li>
+              <li>Migrated the nurse onboarding email system from a manual Gmail mail merge process to an automated AWS SES workflow [cite: 1, 18].</li>
+              <li>Debug cross-client rendering issues, including Gmail dark mode inversion and inconsistent image delivery between Google Drive and S3 hosting, by standardizing formats [cite: 1, 18].</li>
+              <li>Build the company's production website using Next.js and TypeScript, from initial setup through local development toward launch [cite: 1, 18].</li>
+              <li>Test application functionality to catch rendering and delivery issues before release [cite: 18].</li>
+              <li>Track and manage work in JIRA within an Agile workflow [cite: 18].</li>
+              <li>Document processes and the full pipeline in a clear, maintainable playbook adopted team-wide [cite: 1, 18].</li>
+              <li>Communicate directly with the founding team, translating technical issues into clear, actionable recommendations for non-technical stakeholders [cite: 18].</li>
             </ul>
           </div>
 
@@ -943,13 +939,13 @@
               <span class="experience-period">May 2023 – Jun 2023</span>
             </div>
             <ul class="experience-bullets">
-              <li>Designed and deployed a Python-based automated candidate screening pipeline (Flask, Pandas, NLTK).</li>
-              <li>Applied object-oriented design principles and NLP techniques to process unstructured resume data at scale.</li>
-              <li>Reduced screening time by 30% and improved shortlist quality by 20%.</li>
-              <li>Conducted exploratory data analysis and statistical analysis on recruitment metrics (Matplotlib, Seaborn).</li>
-              <li>Identified trends and data-driven insights in recruitment data.</li>
-              <li>Created reports and visualizations to communicate findings.</li>
-              <li>Translated results into clear, actionable, non-technical recommendations for stakeholders.</li>
+              <li>Designed and deployed a Python-based automated candidate screening pipeline (Flask, Pandas, NLTK) [cite: 1, 18].</li>
+              <li>Applied object-oriented design principles and NLP techniques to process unstructured resume data at scale [cite: 1, 18].</li>
+              <li>Reduced screening time by 30% and improved shortlist quality by 20% [cite: 1, 18].</li>
+              <li>Conducted exploratory data analysis and statistical analysis on recruitment metrics (Matplotlib, Seaborn) [cite: 1, 18].</li>
+              <li>Identified trends and data-driven insights in recruitment data [cite: 18].</li>
+              <li>Created reports and visualizations to communicate findings [cite: 18].</li>
+              <li>Translated results into clear, actionable, non-technical recommendations for stakeholders [cite: 18].</li>
             </ul>
           </div>
         </div>
@@ -981,12 +977,12 @@
               </div>
               <h3 class="project-title">Financial Intelligence Platform</h3>
               <p class="project-desc">
-                High-throughput sentiment and market risk intelligence platform processing 1,000+ real-time financial headlines daily.
+                High-throughput sentiment and market risk intelligence platform processing 1,000+ real-time financial headlines daily [cite: 1, 18].
               </p>
               <ul class="project-highlights">
-                <li>Fine-tuned and deployed FinBERT as a standalone service, attaining 85% sentiment accuracy.</li>
-                <li>Engineered a live Streamlit dashboard with risk heatmaps, cutting manual monitoring overhead by 30%.</li>
-                <li>Architected modular routing logic across sentiment, volatility, and risk forecasting pipelines via REST APIs.</li>
+                <li>Fine-tuned and deployed FinBERT as a standalone service, attaining 85% sentiment accuracy [cite: 1, 18].</li>
+                <li>Engineered a live Streamlit dashboard with risk heatmaps, cutting manual monitoring overhead by 30% [cite: 1, 18].</li>
+                <li>Architected modular routing logic across sentiment, volatility, and risk forecasting pipelines via REST APIs [cite: 1, 18].</li>
               </ul>
             </div>
             <div class="tech-stack">
@@ -1008,12 +1004,12 @@
               </div>
               <h3 class="project-title">Parallel Image Compression Engine</h3>
               <p class="project-desc">
-                Scalable multithreaded compression engine leveraging multi-core hardware for compute-heavy discrete cosine transform (DCT) workloads.
+                Scalable multithreaded compression engine leveraging multi-core hardware for compute-heavy discrete cosine transform (DCT) workloads [cite: 1, 18].
               </p>
               <ul class="project-highlights">
-                <li>Attained 2x to 4x workload speedup by distributing DCT, quantization, and dequantization using OpenMP.</li>
-                <li>Eliminated concurrent processing bottlenecks with cache-aware matrix decomposition and memory alignment.</li>
-                <li>Implemented memory layout profiling and performance benchmarking in modern C++.</li>
+                <li>Attained 2x to 4x workload speedup by distributing DCT, quantization, and dequantization using OpenMP [cite: 1, 18].</li>
+                <li>Eliminated concurrent processing bottlenecks with cache-aware matrix decomposition and memory alignment [cite: 1, 18].</li>
+                <li>Implemented memory layout profiling and performance benchmarking in modern C++ [cite: 1, 18].</li>
               </ul>
             </div>
             <div class="tech-stack">
@@ -1034,12 +1030,12 @@
               </div>
               <h3 class="project-title">PCOS Predictive Modeling Pipeline</h3>
               <p class="project-desc">
-                Clinical machine learning pipeline analyzing multi-dimensional patient health markers to isolate key risk indicators.
+                Clinical machine learning pipeline analyzing multi-dimensional patient health markers to isolate key risk indicators [cite: 1, 18].
               </p>
               <ul class="project-highlights">
-                <li>Isolated the 3 most prevalent symptom patterns using logistic regression and feature importance analysis.</li>
-                <li>Built the full pipeline from data ingestion, normalization, cross-validation to model evaluation.</li>
-                <li>Designed interactive Tableau & Power BI dashboards for stakeholder reporting and clinical insights.</li>
+                <li>Isolated the 3 most prevalent symptom patterns using logistic regression and feature importance analysis [cite: 1, 18].</li>
+                <li>Built the full pipeline from data ingestion, normalization, cross-validation to model evaluation [cite: 1, 18].</li>
+                <li>Designed interactive Tableau & Power BI dashboards for stakeholder reporting and clinical insights [cite: 1, 18].</li>
               </ul>
             </div>
             <div class="tech-stack">
